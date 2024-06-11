@@ -1,17 +1,15 @@
 package string;
 
-public class test {
+public class reversalWithIntactSpecialCharacter {
         public static void main(String[] args) {
-            String originalString = "I, Love my World!";
+            String originalString = "My name is, khan!";
             String reversedString = reverseString(originalString);
             System.out.println("Reversed string: " + reversedString);
         }
-
         public static String reverseString(String str) {
             char[] charArray = str.toCharArray();
             int left = 0;
             int right = charArray.length - 1;
-
             // Continue swapping characters from the beginning and end,
             // but ignore special characters and do not reverse their positions
             while (left < right) {
@@ -28,7 +26,6 @@ public class test {
                     right--;
                 }
             }
-
             return new String(charArray);
         }
     }

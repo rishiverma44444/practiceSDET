@@ -21,6 +21,13 @@ public class duplicateString {
             }
         }
         System.out.println(occuranceMap.entrySet());
+//        Set<String> keys = new HashSet<String>();
+//        for(Map.Entry<String, Integer> entry:occuranceMap.entrySet()){
+//            if(entry.getValue()>1){
+//                keys.add(entry.getKey());
+//                System.out.println("Duplicate word is : "+entry.getKey()+", Occurance : "+entry.getValue());
+//            }
+//        }
         findOccurane(occuranceMap);
     }
 
