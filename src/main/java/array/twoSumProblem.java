@@ -5,15 +5,38 @@ import java.util.Map;
 
 public class twoSumProblem {
     public static void main(String[] arg){
-        int[] arr = {1,1,1,1,1,-1};
+        //Input -1
+        int[] arr = {1,1,1,1,1};
         int sum = 2;
-        //twoSumMethod(arr,sum);
+        //Input -2
+        int[] arrOne = {1,1,1,1};
+        int sumOne = 2;
+        //Input 3
+        int[] arrTwo = {1,1,1,1,-1};
+        int sumTwo = 2;
+        //Input -4
+        int[] arrThree = {2,7,6,5,5,3,4,4,4,1};
+        int sumThree = 8;
+        //Input -5
+        int[] arrFour = {2};
+        int sumFour = 2;
+        System.out.println("Input - 1");
         twoSumMethod(arr, sum);
+        System.out.println("Input - 2");
+        twoSumMethod(arrOne, sumOne);
+        System.out.println("Input - 3");
+        twoSumMethod(arrTwo, sumTwo);
+        System.out.println("Input - 4");
+        twoSumMethod(arrThree, sumThree);
+        System.out.println("Input - 5");
+        twoSumMethod(arrFour, sumFour);
     }
-
     public static void twoSumMethod(int[] arr, int sum){
+        if(arr.length < 2){
+            System.out.println("Invalid Array");
+            return;
+        }
         Map<Integer, Integer> freqMap = new HashMap<Integer, Integer>();
-
         // Build frequency map
         for(int i =0; i < arr.length ;i++){
             if(freqMap.containsKey(arr[i])) {
@@ -47,7 +70,6 @@ public class twoSumProblem {
                     }
             }
         }
-
         System.out.println("Total pairs: " + pairs);
     }
 }
